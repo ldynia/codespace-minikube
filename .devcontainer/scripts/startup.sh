@@ -3,7 +3,6 @@
 function start_minikube() {
   echo "Start minikube"
   minikube start --wait "apiserver,system_pods,node_ready,kubelet"
-  docker container restart minikube
   sudo -- bash -c "echo '$(minikube ip) minikube' >> /etc/hosts"
 }
 
