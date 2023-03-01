@@ -5,8 +5,7 @@
   "remoteUser": "vscode",
   "hostRequirements": {
     "cpus": 2,
-    "memory": "4gb",
-    "storage": "32gb"
+    "memory": "4gb"
   },
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
