@@ -3,9 +3,7 @@
   "dockerFile": "Dockerfile",
   "remoteUser": "vscode",
   "hostRequirements": {
-    "cpus": 2,
-    "memory": "4gb",
-    "storage": "16gb"
+    "cpus": 2
   },
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {
