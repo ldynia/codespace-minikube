@@ -1,0 +1,30 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on:
+      labels:
+        - self-hosted
+        # This label is beeing set in startup.sh ./config.sh --labels <LABELS> step
+        - ${{ github.event.repository.name }}
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Minikube Status
+        run: |
+          minikube version
+          minikube status
+
+      - name: Deploy Nginx
+        run: |
+          kubectl create deployment nginx --image nginx --port 80
+          kubectl wait deployment nginx --for condition=Available=True
+          kubectl expose deployment nginx
+          # This fails after few secunds
+          # RUNNER_TRACKING_ID="" && (nohup kubectl port-forward services/nginx 8888:80 &)

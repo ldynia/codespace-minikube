@@ -1,0 +1,35 @@
+// https://aka.ms/devcontainer.json
+{
+  // https://github.com/devcontainers/templates/tree/main/src/ubuntu
+  "image": "mcr.microsoft.com/devcontainers/base:0-ubuntu-22.04",
+  "remoteUser": "vscode",
+  "hostRequirements": {
+    "cpus": 2,
+    "memory": "4gb",
+    "storage": "32gb"
+  },
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+    "ghcr.io/guiyomh/features/vim:0": {}
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    },
+    "vscode": {
+      "extensions": [
+        "cschleiden.vscode-github-actions",
+        "DavidAnson.vscode-markdownlint",
+        "GitHub.vscode-pull-request-github",
+        "ms-azuretools.vscode-docker",
+        "redhat.vscode-yaml"
+      ]
+    }
+  },
+  "postStartCommand": ".devcontainer/scripts/startup.sh"
+}
