@@ -1,10 +1,11 @@
+// Execute Ctrl + K, Ctrl + S and replace content of the file
 [
     {
         "key": "ctrl+,",
         "command": "editor.action.addSelectionToPreviousFindMatch"
     },
     {
-        "key": "alt+d",
+        "key": "alt+d",w
         "command": "editor.action.duplicateSelection"
     },
     {

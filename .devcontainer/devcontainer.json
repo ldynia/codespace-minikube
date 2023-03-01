@@ -4,7 +4,7 @@
   "image": "mcr.microsoft.com/devcontainers/base:0-ubuntu-22.04",
   "remoteUser": "vscode",
   "hostRequirements": {
-    "cpus": 2
+    "cpus": 4
   },
   // Features to add to the dev container. More info: https://containers.dev/features.
   "features": {

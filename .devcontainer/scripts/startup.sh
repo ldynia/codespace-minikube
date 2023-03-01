@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+function setup_vscode() {
+  echo "Configuring vscode"
+  cp /workspaces/codespace-minikube/.devcontainer/config/vscode/settings.json /home/vscode/.vscode-remote/data/Machine/
+}
+
 function start_minikube() {
   echo "Start minikube"
   minikube start --wait "apiserver,system_pods,node_ready,kubelet"
@@ -42,5 +47,6 @@ function start_github_runner() {
 }
 
 # Execute functions
+setup_vscode
 start_minikube
 start_github_runner
