@@ -20,10 +20,6 @@ kubectl apply -f devops/k8s/manifests
 kubectl port-forward service/nginx 8080:80
 ```
 
-# TODO
-
-[start a background server process in a job github self hosted runner](https://stackoverflow.com/questions/68439803/self-hosted-github-runner-start-a-background-server-process-in-a-job-and-let-it)
-
 # Troubleshoot Self Hosted Runner
 
 1. Test Connectivity
@@ -42,3 +38,6 @@ kubectl port-forward service/nginx 8080:80
     $GH_ACTION_DIR/config.sh remove --token $SELF_HOSTED_RUNNER_PAT_TOKEN
     ```
 
+# TODO
+
+[start a background server process in a job github self hosted runner](https://stackoverflow.com/questions/68439803/self-hosted-github-runner-start-a-background-server-process-in-a-job-and-let-it)
