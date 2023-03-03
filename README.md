@@ -1,3 +1,8 @@
+# Decription
+
+This repository is a playground for working with minikube and GitHub actions. All actions are executed inside codespace that runs self-hosted agent that is 
+launched on codespaces startup together with minikube.
+
 # Setup
 
 1. In [Settings > Developer settings](https://github.com/settings/tokens/new)
