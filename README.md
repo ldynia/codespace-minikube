@@ -1,3 +1,8 @@
+# Decription
+
+This repository is a playground for working with minikube and GitHub actions. All actions are executed inside codespace that runs self-hosted agent that is 
+launched on codespaces startup together with minikube.
+
 # Setup
 
 1. In [Settings > Developer settings](https://github.com/settings/tokens/new)
@@ -14,10 +19,6 @@
 kubectl apply -f devops/k8s/manifests
 kubectl port-forward service/nginx 8080:80
 ```
-
-# TODO
-
-[start a background server process in a job github self hosted runner](https://stackoverflow.com/questions/68439803/self-hosted-github-runner-start-a-background-server-process-in-a-job-and-let-it)
 
 # Troubleshoot Self Hosted Runner
 
@@ -37,3 +38,6 @@ kubectl port-forward service/nginx 8080:80
     $GH_ACTION_DIR/config.sh remove --token $SELF_HOSTED_RUNNER_PAT_TOKEN
     ```
 
+# TODO
+
+[start a background server process in a job github self hosted runner](https://stackoverflow.com/questions/68439803/self-hosted-github-runner-start-a-background-server-process-in-a-job-and-let-it)
