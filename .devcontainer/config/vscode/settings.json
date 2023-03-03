@@ -1,0 +1,17 @@
+{
+	"search.exclude": {
+		"**/__pycache__": true
+	},
+	"files.exclude": {
+		"**/__pycache__": true,
+		"**/.pyc": true,
+		"**/.pyo": true
+	},
+	"editor.tabSize": 2,
+	"[python]": {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 4
+	},
+	"files.encoding": "utf8bom",
+	"workbench.colorTheme": "Default Dark+"
+}
